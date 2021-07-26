@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
     subconfig.vm.box = BOX_IMAGE
     subconfig.vm.hostname = "landingpage"
     #subconfig.vm.network "forwarded_port", guest: 80, host: 8002
-    subconfig.vm.network "private_network", ip: "192.168.21.1"
+    subconfig.vm.network "private_network", ip: "192.168.21.2"
     subconfig.vm.provision "shell", path: "deploy-landingpage.sh"
   end
 
@@ -72,7 +72,7 @@ Vagrant.configure("2") do |config|
     subconfig.vm.box = BOX_IMAGE
     subconfig.vm.hostname = "wordpress"
     #subconfig.vm.network "forwarded_port", guest: 80, host: 8003
-    subconfig.vm.network "private_network", ip: "192.168.21.2"
+    subconfig.vm.network "private_network", ip: "192.168.21.3"
     subconfig.vm.provision "shell", path: "deploy-wordpress.sh"
   end
 
@@ -80,7 +80,7 @@ Vagrant.configure("2") do |config|
     subconfig.vm.box = BOX_IMAGE
     subconfig.vm.hostname = "socialmedia"
     #subconfig.vm.network "forwarded_port", guest: 80, host: 8004
-    subconfig.vm.network "private_network", ip: "192.168.21.3"
+    subconfig.vm.network "private_network", ip: "192.168.21.4"
     subconfig.vm.provision "shell", path: "deploy-sosialmedia.sh"
   end
   #
